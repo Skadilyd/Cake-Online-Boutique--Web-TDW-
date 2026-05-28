@@ -1,0 +1,165 @@
+body {
+    background-image: url("/img/img1.jpg");
+    background-repeat: repeat;
+}
+
+h1{
+    color:darkmagenta;
+    font-size: 200%;
+    margin: 6.5%;
+}
+
+p{
+    font-family: FunnelFont;
+}
+
+#llistaProductes {
+    grid-area:products;
+}
+
+#headerPagina{
+    width: 100%;
+    display: inline grid;
+    grid-template-columns: 5% 35% 40% 19%;
+    grid-template-areas:
+        'botoHome nomPagina buscador botoCompte';
+    background-color: rgba(248, 235, 223, 0.8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-area: headerPagina;
+}
+
+
+#footerPagina{
+    width: 100%;
+    background-color: rgba(248, 235, 223, 0.8);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    grid-area: footerPagina;
+}
+
+#layoutPaginaPrincipal {
+    display: grid;
+    grid-template-areas: 
+        "headerPagina headerPagina"
+        "elementDinamic infoCarro"
+        "footerPagina footerPagina";
+    grid-template-columns: 4fr 1fr;
+}
+
+
+
+#infoCarro {
+    background-color: rgba(46, 139, 87, 0.3);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    margin-top: 15px;
+    margin-left: 15px;
+    grid-area: infoCarro;
+}
+
+.centerDiv {
+    text-align: center;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(240, 248, 255, 0.6);
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.itemButton{
+    color: whitesmoke;
+}
+
+.infoCarro{
+    position:fixed;
+}
+
+.item{
+    display: grid;
+    grid-template-areas: 
+        'imatge'
+        'titol'
+        'subtitol'
+        'descripcio'
+        'botoMesInformacio';
+    width: 20%;
+    max-width: 20%;
+    padding: 10px;
+    align-content: space-around;
+}
+
+.productItem {
+    width: 20%;
+    min-width: 320px;
+}
+
+.itemCarro {
+    display: grid;
+    grid-template-areas: 
+        'imatge nom quantitat preu edit';
+    width: 100%;
+    margin: 15px 15px 0px;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+}
+
+.botoMesInformacio{
+    color: black;
+}
+
+#botoCompte{
+    color: #b9d9e3;
+}
+
+.productItem{
+    margin: 10px;
+}
+
+.purchase {
+    display: grid;
+    grid-template-areas: 
+        'date product_number preu_total more_info'
+        'llistaProductes llistaProductes llistaProductes llistaProductes';
+    width: 100%;
+    margin: 15px 15px 15px 0px;
+    text-align: start;
+    align-content: space-around;
+    background-color: rgba(240, 248, 255, 0.6);
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+#edit {
+    grid-area:edit;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#botoHome {
+    grid-area: botoHome;
+}
+
+#nomPagina {
+    grid-area: nomPagina;
+}
+
+#buscador {
+    grid-area: buscador;
+    justify-content: center;
+}
+
+#botoCompte {
+    grid-area: botoCompte;
+}
+
+#botoCarro {
+    grid-area: botoCarro;
+}
